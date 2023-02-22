@@ -42,4 +42,11 @@ public class Hero : MonoBehaviour
         // Rotate the ship to make it feel more dynamic                     
         transform.rotation = Quaternion.Euler(vAxis * pitchMult, hAxis * rollMult, 0);
     }
+
+    void OnTriggerEnter(Collider other)
+    {
+        Transform rootT = other.gameObject.transform.root;                  
+        GameObject go = rootT.gameObject;
+        Debug.Log("Shield trigger hit by: " + go.gameObject.name);
+    }
 }
