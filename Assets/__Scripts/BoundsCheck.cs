@@ -40,9 +40,9 @@ using UnityEngine;
             {                                               
                 pos.x = camWidth + checkRadius;                                                
             }
-            if (pos.x < -camWidth + checkRadius)
+            if (pos.x < -camWidth - checkRadius)
             { 
-                pos.x = -camWidth + checkRadius;                                                
+                pos.x = -camWidth - checkRadius;                                                
             }
 
             // Restrict the Y position to camHeight
@@ -50,9 +50,9 @@ using UnityEngine;
             {                                              
                 pos.y = camHeight + checkRadius;                                                
             }
-            if (pos.y < -camHeight + checkRadius)
+            if (pos.y < -camHeight - checkRadius)
             {                                            
-                pos.y = -camHeight + checkRadius;                                               
+                pos.y = -camHeight - checkRadius;                                               
             }
 
             transform.position = pos;
